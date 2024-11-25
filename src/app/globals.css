@@ -2,26 +2,217 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-red: hsl(0, 94%, 62%);
+  --primary-green: hsl(101, 44%, 48%);
+  --primary-blue: hsl(209, 100%, 43%);
+  --primary-purple: hsl(259, 72%, 58%);
+  --primary-yellow: hsl(43, 100%, 50%);
+  --primary-dark: hsl(248, 33%, 14%);
+  --primary-turquoise: hsl(186, 69%, 69%);
+
+  /* Secondary Colors */
+
+  /* Red-Black */
+  --secondary-red-black-10: hsl(0, 56%, 6%);
+  --secondary-red-black-20: hsl(0, 56%, 13%);
+  --secondary-red-black-30: hsl(0, 56%, 19%);
+  --secondary-red-black-40: hsl(16, 100%, 20%);
+  --secondary-red-black-50: hsl(16, 100%, 25%);
+  --secondary-red-black-60: hsl(16, 99%, 30%);
+  --secondary-red-black-70: hsl(16, 99%, 35%);
+  --secondary-red-black-80: hsl(16, 99%, 40%);
+  --secondary-red-black-90: hsl(16, 99%, 45%);
+  --secondary-red-black-100: hsl(16, 100%, 50%);
+
+  /* Orange */
+  --orange-10: hsl(16, 100%, 55%);
+  --orange-20: hsl(16, 100%, 60%);
+  --orange-30: hsl(16, 100%, 65%);
+  --orange-40: hsl(16, 100%, 70%);
+  --orange-50: hsl(16, 100%, 75%);
+  --orange-60: hsl(16, 100%, 80%);
+
+  /* Pink */
+  --pink-10: hsl(0, 93%, 89%);
+  --pink-20: hsl(0, 95%, 93%);
+  --pink-30: hsl(0, 95%, 93%);
+  --pink-40: hsl(0, 90%, 96%);
+
+  /* Yellow Black */
+  --yellow-black-10: hsl(42, 100%, 5%);
+  --yellow-black-20: hsl(44, 100%, 10%);
+  --yellow-black-30: hsl(43, 100%, 15%);
+  --yellow-black-40: hsl(43, 100%, 20%);
+  --yellow-black-50: hsl(43, 100%, 25%);
+  --yellow-black-60: hsl(43, 99%, 30%);
+  --yellow-black-70: hsl(43, 100%, 35%);
+  --yellow-black-80: hsl(43, 100%, 40%);
+  --yellow-black-90: hsl(43, 100%, 45%);
+  --yellow-black-100: hsl(43, 100%, 50%);
+
+  /* Yellow */
+  --yellow-10: hsl(43, 100%, 55%);
+  --yellow-20: hsl(43, 100%, 60%);
+  --yellow-30: hsl(43, 100%, 65%);
+  --yellow-40: hsl(43, 100%, 75%);
+  --yellow-50: hsl(43, 100%, 80%);
+  --yellow-60: hsl(44, 100%, 85%);
+  --yellow-70: hsl(44, 100%, 90%);
+  --yellow-80: hsl(44, 100%, 95%);
+
+  /* Blue Black */
+  --blue-black-10: hsl(210, 100%, 4%);
+  --blue-black-20: hsl(209, 100%, 9%);
+  --blue-black-30: hsl(209, 100%, 13%);
+  --blue-black-40: hsl(209, 100%, 17%);
+  --blue-black-50: hsl(208, 100%, 22%);
+  --blue-black-60: hsl(209, 100%, 26%);
+  --blue-black-70: hsl(209, 100%, 30%);
+  --blue-black-80: hsl(209, 100%, 35%);
+  --blue-black-90: hsl(209, 100%, 39%);
+  --blue-black-100: hsl(209, 100%, 43%);
+
+  /* Blue */
+  --blue-10: hsl(209, 80%, 49%);
+  --blue-20: hsl(209, 76%, 55%);
+  --blue-30: hsl(209, 76%, 60%);
+  --blue-40: hsl(209, 76%, 66%);
+  --blue-50: hsl(209, 76%, 72%);
+  --blue-60: hsl(209, 76%, 77%);
+  --blue-70: hsl(210, 77%, 83%);
+  --blue-80: hsl(207, 76%, 89%);
+  --blue-90: hsl(207, 73%, 94%);
+
+  /* Purple Black */
+  --purple-black-10: hsl(255, 53%, 6%);
+  --purple-black-20: hsl(259, 53%, 12%);
+  --purple-black-30: hsl(259, 55%, 17%);
+  --purple-black-40: hsl(258, 53%, 23%);
+  --purple-black-50: hsl(259, 54%, 29%);
+  --purple-black-60: hsl(259, 53%, 35%);
+  --purple-black-70: hsl(259, 53%, 40%);
+  --purple-black-80: hsl(259, 54%, 46%);
+  --purple-black-90: hsl(259, 58%, 52%);
+  --purple-black-100: hsl(259, 72%, 58%);
+
+  /* Purple */
+  --purple-10: hsl(259, 72%, 62%);
+  --purple-20: hsl(259, 73%, 66%);
+  --purple-30: hsl(259, 73%, 70%);
+  --purple-40: hsl(259, 72%, 75%);
+  --purple-50: hsl(260, 73%, 79%);
+  --purple-60: hsl(259, 73%, 83%);
+  --purple-70: hsl(259, 72%, 87%);
+  --purple-80: hsl(259, 72%, 92%);
+  --purple-90: hsl(256, 71%, 96%);
+
+  /* Green Black */
+  --green-black-10: hsl(104, 44%, 5%);
+  --green-black-20: hsl(100, 43%, 10%);
+  --green-black-30: hsl(100, 45%, 15%);
+  --green-black-40: hsl(100, 44%, 19%);
+  --green-black-50: hsl(101, 44%, 24%);
+  --green-black-60: hsl(101, 44%, 29%);
+  --green-black-70: hsl(101, 44%, 34%);
+  --green-black-80: hsl(101, 45%, 38%);
+  --green-black-90: hsl(100, 44%, 43%);
+  --green-black-100: hsl(101, 44%, 48%);
+
+  /* Green */
+  --green-10: hsl(101, 40%, 53%);
+  --green-20: hsl(101, 41%, 58%);
+  --green-30: hsl(101, 40%, 64%);
+  --green-40: hsl(101, 41%, 69%);
+  --green-50: hsl(100, 40%, 74%);
+  --green-60: hsl(100, 40%, 79%);
+  --green-70: hsl(101, 40%, 84%);
+  --green-80: hsl(100, 40%, 89%);
+  --green-90: hsl(98, 41%, 95%);
+
+  /* Dark Colors */
+  --dark-1: hsl(248, 33%, 14%);
+  --dark-2: hsl(222, 27%, 13%);
+  --dark-3: hsl(221, 16%, 19%);
+  --gray-1: hsl(245, 6%, 64%);
+  --gray-2: hsl(228, 4%, 74%);
+  --gray-3: hsl(252, 6%, 83%);
+  --gray-4: hsl(240, 33%, 95%);
+  --gray-5: hsl(240, 27%, 98%);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
